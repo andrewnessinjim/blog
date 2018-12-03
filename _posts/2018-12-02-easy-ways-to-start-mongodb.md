@@ -1,12 +1,14 @@
 ---
-published: false
+published: true
+layout: post
+title: 5 Easy Ways to Get Started With MongoDB
 ---
 # 5 Easy Ways to Get Started With MongoDB
 
 I was proud of myself when I earned the MongoDB developer certification within few months after getting into MongoDB. Given my track record of zero certifications, this really was something to be proud of. Of course, a certification may not interest you based on your personal learning methods. But If you're looking forward to learn MongoDB, then here are some easy ways that can help you:
 
 ## Online Training
-[MongoDB university's][1] is the best place to start your MongoDB journey. They offer a variety of free courses focusing on different roles of a MongoDB specialist - developer, admin, cluster managament etc. These courses are designed to help you learn both theory and practical. To make the most out of it, play around with the practical examples provided. The class helps you enough with each practical examples so you can experiment on your own. By just investing 3-4hrs a week for few weeks you will be well on your way in becoming a MongoDB lover. By taking this as a first step you can build a good foundation which will you help in the other 4 ways of learning described further below.
+[MongoDB university's][1] is the best place to start your MongoDB journey. They offer a variety of free courses focusing on different roles of a MongoDB specialist - developer, admin, cluster management etc. These courses are designed to help you learn both theory and practical. To make the most out of it, play around with the practical examples provided. The class helps you enough with each practical examples so you can experiment on your own. By just investing 3-4 hours a week for few weeks you will be well on your way in becoming a MongoDB lover. By taking this as a first step you can build a good foundation which will you help in the other 4 ways of learning described further below.
 
 ## Official Documentation
 [MongoDB's official documentation][2] is excellent in clarity! Most concepts are accompanied by practical examples. You should have no problem becoming a MongoDB expert just by learning through the docs in the same order they are organized. If you have any prior experience with databases, you will find it easier to get up to speed with MongoDB using the docs. If you don't, I would suggest to take a course from the MongoDB university first and then dive into the docs. This will help establish a solid context for you.
