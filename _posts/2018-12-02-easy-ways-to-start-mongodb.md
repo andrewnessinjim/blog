@@ -3,7 +3,6 @@ published: true
 layout: post
 title: 5 Easy Ways to Get Started With MongoDB
 ---
-# 5 Easy Ways to Get Started With MongoDB
 
 I was proud of myself when I earned the MongoDB developer certification within few months after getting into MongoDB. Given my track record of zero certifications, this really was something to be proud of. Of course, a certification may not interest you based on your personal learning methods. But If you're looking forward to learn MongoDB, then here are some easy ways that can help you:
 
