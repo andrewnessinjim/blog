@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+I started off as a Java developer in 2014. I like learning new programming languages, I am fascinated how each programming language approaches the problem of talking with a computer differently. I am working my way towards becoming a full stack developer.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[ripecode@gmail.com](mailto:ripecode@gmail.com)
