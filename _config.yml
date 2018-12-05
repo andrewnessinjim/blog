@@ -19,14 +19,14 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 footer-links:
   dribbble:
   email: andrewnessinjim@yahoo.com
-  facebook: andrewnessinjim
+  facebook:
   flickr:
   github: andrewnessinjim
   instagram:
   linkedin: andrewnessinjim
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter:
   stackoverflow: users/5800527/andrew-nessin
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
