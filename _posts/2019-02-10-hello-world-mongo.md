@@ -8,7 +8,7 @@ We'll create a java application with a main method that exposes a web service. T
 [Maven][4]
 [JDK][5]
 
-## Step 1: Build and run a jersey hello world application
+## Step 1: Build and Run a Jersey Hello World Application
 By the end of this step, you should have a java application that you can run locally and has a web service which returns a hardcoded `Hello World` string.
 
 Run the below command in a new empty directory:
@@ -51,7 +51,7 @@ You should see a message similar to this:
 
 You should now be able to access the URL exposed by the application in this URL: [http://localhost:8080/myresource](http://localhost:8080/myresource)
 
-## Step 2: Spin up your mongod instance on Atlas
+## Step 2: Spin Up Your Mongod Instance on Atlas
 Follow the first 5 steps from [MongoDB's official docs][6] to start up your free cluster. It is a 3 member replica set and allows up to 512MB storage. We could do a lot of interesting demo projects with that :).
 
 Now you should have your free instance running and a user with admin role. It's best that we create a separate user for our application. This user usually has read and write access to a particular database, because any application is meant to do just that in most cases. For our example, we'll create such an user:
@@ -83,7 +83,7 @@ You are ready to test your instance now. Head back to the Overview tab in your a
 
 This is the document we're going to fetch from our simple java application
 
-## Step 3: Connect to your atlas mongod instance from Java
+## Step 3: Connect To Your Atlas mongod Instance From Java
 Add the below dependency to your `pom.xml` file:
 
     <dependency>
