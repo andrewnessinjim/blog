@@ -7,6 +7,7 @@ We'll create a java application with a main method that exposes a web service. T
 ## Prerequisites
 [Maven][4]
 [JDK][5]
+[Git][8]
 
 ## Step 1: Build and Run a Jersey Hello World Application
 By the end of this step, you should have a java application that you can run locally and has a web service which returns a hardcoded `Hello World` string.
@@ -38,7 +39,7 @@ You can change the `groupId`, `artifactId` and `package` values as required. Thi
                 └───WEB-INF
                         web.xml
 
-I've ommitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about each file in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
+I've ommitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about some of these files in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
 
     cd mongo-heroku-webapp/
     mvn clean package
@@ -152,6 +153,20 @@ Place this code in a new `MongoService.java` file in `com.ripecoe.heroku` packag
     
   You should now be able to access the URL exposed by the application in this URL: [http://localhost:8080/myresource](http://localhost:8080/myresource). But this time you should see the message you inserted in MongoDB.
 
+## Step 4: Prepare The Application for Heroku
+Now let's get back to the files  we saw earlier:
+
+
+    │   pom.xml
+    │   Procfile
+    │   system.properties
+    
+
+The `ProcFile` tells Heroku how to run your application. This file will have the same java command that we have been using to run the application so far. The `pom.xml` file is configured to dump all your application dependencies into a directory called `dependency` under `target`. Heroku makes the `target` directory available when the commands in `ProcFile` are executed. Hence, we're able to mention subdirectories of `target` folder as java classpaths. You need not change any of this. However, ensure that the JDK version configured in your `system.properties` file is `1.8`:
+
+	java.runtime.version=1.8
+
+This is essential to connect to MongoDB free tier instance.
 ## References
 * [Heroku's official "Getting Started on Heroku with Java" tutorial][2]
 * [Jersey's official "Creating a Web Application that can be deployed on Heroku" tutorial][3]
@@ -163,3 +178,4 @@ Place this code in a new `MongoService.java` file in `com.ripecoe.heroku` packag
 [5]: https://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/
 [6]: https://docs.atlas.mongodb.com/getting-started/
 [7]: http://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/
+[8]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
