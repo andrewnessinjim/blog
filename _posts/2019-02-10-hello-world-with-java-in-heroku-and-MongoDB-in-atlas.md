@@ -41,10 +41,7 @@ You can change the `groupId`, `artifactId` and `package` values as required. Thi
 
 I've omitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about some of these files in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
 
-    cd mongo-heroku-webapp/
-    mvn clean package
-    java -cp "target/classes;target/dependency/*" com.ripecode.heroku.Main (For Windows)
-    java -cp target/classes:target/dependency/* com.ripecode.heroku.Main (For Linux)
+<script src="https://gist.github.com/andrewnessinjim/23f94d0f5e4cb11284a50397e20aa3e8.js"></script>
     
 You should see a message similar to this:
 
@@ -122,10 +119,7 @@ Place this code in a new `MongoService.java` file in `com.ripecoe.heroku` packag
     
  You can now run the same commands you used before and see the application in action:
  
-    cd mongo-heroku-webapp/
-    mvn clean package
-    java -cp "target/classes;target/dependency/*" com.ripecode.heroku.Main (For Windows)
-    java -cp target/classes:target/dependency/* com.ripecode.heroku.Main (For Linux)
+<script src="https://gist.github.com/andrewnessinjim/23f94d0f5e4cb11284a50397e20aa3e8.js"></script>
     
   You should now be able to access the URL exposed by the application in this URL: [http://localhost:8080/myresource](http://localhost:8080/myresource). But this time you should see the message you inserted in MongoDB.
 
