@@ -61,10 +61,13 @@ Now you should have your free instance running and a user with admin role. It's 
 2. Click on MongoDB roles.
 3. Click on "+ Add New Custom Role" button.
 4. Fill up the values as shown:
+
 ![MongoDB Atlas New Custom Role]({{ site.baseurl }}/images/hello-mongo-heroku/new_role.png)
+
 Leaving the collection field empty means the user has relevant access to all the collections in the mentioned database.
 5. Now head back to the MongoDB Users subtab and click on "+ ADD NEW USER".
 6. Fill up the values as shown:
+
 ![MongoDB Atlas New User]({{ site.baseurl }}/images/hello-mongo-heroku/new_user.png)
 
 You are ready to test your instance now. Head back to the Overview tab in your atlas account and click on the CONNECT button. Follow the steps to connect to your instance from a Mongo shell. Remember to use the username and password of the new user we created. Insert a sample document once you're connected:
