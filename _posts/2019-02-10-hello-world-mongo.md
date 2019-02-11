@@ -39,7 +39,7 @@ You can change the `groupId`, `artifactId` and `package` values as required. Thi
                 └───WEB-INF
                         web.xml
 
-I've ommitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about some of these files in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
+I've omitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about some of these files in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
 
     cd mongo-heroku-webapp/
     mvn clean package
@@ -64,7 +64,7 @@ Now you should have your free instance running and a user with admin role. It's 
 ![MongoDB Atlas New Custom Role]({{ site.baseurl }}/images/hello-mongo-heroku/new_role.png)
 Leaving the collection field empty means the user has relevant access to all the collections in the mentioned database.
 5. Now head back to the MongoDB Users subtab and click on "+ ADD NEW USER".
-6. Fill up th values as shown:
+6. Fill up the values as shown:
 ![MongoDB Atlas New User]({{ site.baseurl }}/images/hello-mongo-heroku/new_user.png)
 
 You are ready to test your instance now. Head back to the Overview tab in your atlas account and click on the CONNECT button. Follow the steps to connect to your instance from a Mongo shell. Remember to use the username and password of the new user we created. Insert a sample document once you're connected:
@@ -166,7 +166,48 @@ The `ProcFile` tells Heroku how to run your application. This file will have the
 
 	java.runtime.version=1.8
 
-This is essential to connect to MongoDB free tier instance.
+This is essential to connect to MongoDB free tier instance. Heroku deployments are carried out using git repositories. So we've to create a git repository:
+
+1. Create a `.gitignore` file with the below contents (`.idea` is for IntelliJ. Ignore the relevant metadata files of your IDE):
+
+        target
+        .idea
+
+2. Run `git init`
+3. Run `git add .`
+4. Run `git commit -m "Initial commit"`
+
+## Step 5: Deploy to Heroku
+
+1. Head over to [Heroku's sign up page][9] and create a free account.
+2. Follow the [official docs to install][10] the heroku command line utility.
+3. `cd` in to your project directory:
+    	
+        cd mongo-heroku-webapp/
+    
+4. Run `heroku login` to login to your account.
+5. Run `heroku create mongo-heroku-webapp` to create your heroku application based on your current directory.
+6. The previous step detects that you have initialized a git repository and sets up the necessary git remotes for deployment. You can verify this with the below command:
+
+        $ git remote -v
+        heroku  https://git.heroku.com/mongo-heroku-webapp.git (fetch)
+        heroku  https://git.heroku.com/mongo-heroku-webapp.git (push)
+
+7. Run `git push heroku master` to deploy your application to heroku.
+8. Run `heroku open` to open your application in your web browser. This will reveal your application's URL in the browser. It should look something like this:
+
+		https://mongo-heroku-webapp.herokuapp.com/
+        
+Heroku doesn't know the actual URL's we're listening to from our application. But we have the base URL of our application. We can see in the `MyResource` class that we're listening for `/myresource` URL:
+
+		@Path("myresource")
+        
+Hence https://mongo-heroku-webapp.herokuapp.com/myresource is the full URL to our application. Accessing this URL from the browser should fetch you the message that we have saved in our atlas cluster. :)
+
+![Final output in a browser]({{ site.baseurl }}/images/hello-mongo-heroku/output.png)
+
+You might have noticed that we've hardcoded the DB URL, user name and password in Java. This is a bad practice and we can use [config vars in heroku][11] to avoid this. I will create a separate post to explain this.
+
 ## References
 * [Heroku's official "Getting Started on Heroku with Java" tutorial][2]
 * [Jersey's official "Creating a Web Application that can be deployed on Heroku" tutorial][3]
@@ -179,3 +220,6 @@ This is essential to connect to MongoDB free tier instance.
 [6]: https://docs.atlas.mongodb.com/getting-started/
 [7]: http://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/
 [8]: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+[9]: https://signup.heroku.com/dc
+[10]: https://devcenter.heroku.com/articles/getting-started-with-java#set-up
+[11]: https://devcenter.heroku.com/articles/getting-started-with-java#define-config-vars
