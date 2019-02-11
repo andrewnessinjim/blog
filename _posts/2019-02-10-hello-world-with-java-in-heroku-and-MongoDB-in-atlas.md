@@ -21,23 +21,7 @@ Run the below command in a new empty directory:
                 
 You can change the `groupId`, `artifactId` and `package` values as required. This will create an application with this structure:
 
-    │   pom.xml
-    │   Procfile
-    │   system.properties
-    │
-    └───src
-        └───main
-            ├───java
-            │   └───com
-            │       └───ripecode
-            │           │   MyResource.java
-            │           │
-            │           └───heroku
-            │                   Main.java
-            │
-            └───webapp
-                └───WEB-INF
-                        web.xml
+<script src="https://gist.github.com/andrewnessinjim/0cbeca1dbc5125fda1c88c9901a7c1cd.js"></script>
 
 I've omitted the test directory. In fact, remove the test directory, we're not concerned with it in this tutorial. We'll talk about some of these files in a moment. For now, let's see the application in action. Run the below commands to build and run the application:
 
