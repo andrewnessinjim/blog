@@ -103,12 +103,8 @@ Place this code in a new `MongoService.java` file in `com.ripecoe.heroku` packag
 ## Step 4: Prepare The Application for Heroku
 Now let's get back to the files  we saw earlier:
 
-
-    │   pom.xml
-    │   Procfile
-    │   system.properties
+<script src="https://gist.github.com/andrewnessinjim/8065cb53443f780a9f129db49d703cd9.js"></script>
     
-
 The `ProcFile` tells Heroku how to run your application. This file will have the same java command that we have been using to run the application so far. The `pom.xml` file is configured to dump all your application dependencies into a directory called `dependency` under `target`. Heroku makes the `target` directory available when the commands in `ProcFile` are executed. Hence, we're able to mention subdirectories of `target` folder as java classpaths. You need not change any of this. However, ensure that the JDK version configured in your `system.properties` file is `1.8`:
 
 	java.runtime.version=1.8
