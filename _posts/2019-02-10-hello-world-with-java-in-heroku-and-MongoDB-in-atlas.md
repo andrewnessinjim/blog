@@ -14,10 +14,7 @@ By the end of this step, you should have a java application that you can run loc
 
 Run the below command in a new empty directory:
 
-    mvn archetype:generate -DarchetypeArtifactId=jersey-heroku-webapp \
-                    -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
-                    -DgroupId=com.ripecode -DartifactId=mongo-heroku-webapp -Dpackage=com.ripecode \
-                    -DarchetypeVersion=2.28
+<script src="https://gist.github.com/andrewnessinjim/fb8636ec3fae63c5944f8b241febd1fc.js"></script>
                 
 You can change the `groupId`, `artifactId` and `package` values as required. This will create an application with this structure:
 
@@ -71,11 +68,7 @@ This is the document we're going to fetch from our simple java application
 ## Step 3: Connect To Your Atlas mongod Instance From Java
 Add the below dependency to your `pom.xml` file:
 
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver</artifactId>
-      <version>3.9.1</version>
-    </dependency>
+<script src="https://gist.github.com/andrewnessinjim/e60fd31b3b5c91b6c0399b7da315b646.js"></script>
 
 1. Head back to your atlas account and click on CONNECT button from the Overview tab.
 2. Choose Connect Your Application.
