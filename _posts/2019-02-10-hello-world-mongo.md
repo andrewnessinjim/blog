@@ -98,8 +98,8 @@ Add the below dependency to your `pom.xml` file:
 3. Copy the standard connection string.
 4. Replace the username and password to tutorial-user. This is the same user created earlier. The URL should look something like this now:
 
-
-      mongodb://tutorial-user:tutorial-user@cluster0-shard-00-00-2lbue.mongodb.net:27017,cluster0-shard-00-01-2lbue.mongodb.net:27017,cluster0-shard-00-02-2lbue.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+        mongodb://tutorial-user:tutorial-user@cluster0-shard-00-00-2lbue.mongodb.net:27017,cluster0-shard-00-01-2lbue.mongodb.net:27017,cluster0-shard-00-02-2lbue.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+    
   
 You can refer to the [docs][7] for a step by step tutorial, but here's the code for connecting:
 
