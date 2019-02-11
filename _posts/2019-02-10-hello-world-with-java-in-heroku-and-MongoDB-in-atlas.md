@@ -207,7 +207,7 @@ Heroku doesn't know the actual URL's we're listening to from our application. Bu
         
 Hence https://mongo-heroku-webapp.herokuapp.com/myresource is the full URL to our application. Accessing this URL from the browser should fetch you the message that we have saved in our atlas cluster. :)
 
-![Final output in a browser]({{ site.baseurl }}/images/hello-mongo-heroku/output.png)
+![Final output in a browser]({{ site.baseurl }}/images/hello-mongo-heroku/output.PNG)
 
 You might have noticed that we've hardcoded the DB URL, user name and password in Java. This is a bad practice and we can use [config vars in heroku][11] to avoid this. I will create a separate post to explain the steps.
 
