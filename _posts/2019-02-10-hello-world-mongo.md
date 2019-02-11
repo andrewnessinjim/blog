@@ -206,7 +206,7 @@ Hence https://mongo-heroku-webapp.herokuapp.com/myresource is the full URL to ou
 
 ![Final output in a browser]({{ site.baseurl }}/images/hello-mongo-heroku/output.png)
 
-You might have noticed that we've hardcoded the DB URL, user name and password in Java. This is a bad practice and we can use [config vars in heroku][11] to avoid this. I will create a separate post to explain this.
+You might have noticed that we've hardcoded the DB URL, user name and password in Java. This is a bad practice and we can use [config vars in heroku][11] to avoid this. I will create a separate post to explain the steps.
 
 ## References
 * [Heroku's official "Getting Started on Heroku with Java" tutorial][2]
