@@ -5,9 +5,9 @@ title: Hello World with Java in Heroku and MongoDB in Atlas
 We'll create a java application with a main method that exposes a web service. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from here. All the tools used are free.
 
 ## Prerequisites
-[Maven][4]
-[JDK][5]
-[Git][8]
+* [Maven][4]
+* [JDK][5]
+* [Git][8]
 
 ## Step 1: Build and Run a Jersey Hello World Application
 By the end of this step, you should have a java application that you can run locally and has a web service which returns a hardcoded `Hello World` string.
