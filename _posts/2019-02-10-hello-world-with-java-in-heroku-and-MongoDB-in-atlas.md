@@ -1,7 +1,6 @@
 ---
 published: true
 ---
-# Hello World with Java in Heroku and MongoDB in Atlas
 We'll create a java application with a main method that exposes a web service. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from here. All the tools used are free.
 
 ## Prerequisites
