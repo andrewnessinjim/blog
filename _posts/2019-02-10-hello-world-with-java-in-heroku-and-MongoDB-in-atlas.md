@@ -26,7 +26,7 @@ I've omitted the test directory. In fact, remove the test directory, we're not c
     
 You should see a message similar to this:
 
-    2019-02-10 19:54:44.489:INFO:oejs.ServerConnector:main: Started ServerConnector@24105dc5{HTTP/1.1}{0.0.0.0:8080}
+<script src="https://gist.github.com/andrewnessinjim/7a95295b8c83af19560c5197d93d12d4.js"></script>
 
 You should now be able to access the URL exposed by the application in this URL: [http://localhost:8080/myresource](http://localhost:8080/myresource)
 
@@ -50,18 +50,7 @@ Leaving the collection field empty means the user has relevant access to all the
 
 You are ready to test your instance now. Head back to the Overview tab in your atlas account and click on the CONNECT button. Follow the steps to connect to your instance from a Mongo shell. Remember to use the username and password of the new user we created. Insert a sample document once you're connected:
 
-    MongoDB Enterprise Cluster0-shard-0:PRIMARY> use tutorial
-    switched to db tutorial
-    MongoDB Enterprise Cluster0-shard-0:PRIMARY> db.messages.insertOne({message: "Hello from MongoDB"})
-    {
-            "acknowledged" : true,
-            "insertedId" : ObjectId("5c60b282f066fe5f423c76b6")
-    }
-    MongoDB Enterprise Cluster0-shard-0:PRIMARY> db.messages.findOne()
-    {
-            "_id" : ObjectId("5c60b282f066fe5f423c76b6"),
-            "message" : "Hello from MongoDB"
-    }
+<script src="https://gist.github.com/andrewnessinjim/f431e101c16f7d8fc95eff4bb5d1ccbc.js"></script>
 
 This is the document we're going to fetch from our simple java application
 
