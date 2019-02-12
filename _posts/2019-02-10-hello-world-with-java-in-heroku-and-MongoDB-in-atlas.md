@@ -9,10 +9,10 @@ We'll create a java application with a main method that exposes a web service. T
 * [JDK][5]
 * [Git][8]
 
-## Step 1: Build and Run a Jersey Hello World Application
+## Step 1: Build and Run a Hello World Java Application using Jersey
 By the end of this step, you should have a java application that you can run locally and has a web service which returns a hardcoded `Hello World` string.
 
-Run the below command in a new empty directory:
+Run the below command in a new empty directory on your computer:
 
 <script src="https://gist.github.com/andrewnessinjim/fb8636ec3fae63c5944f8b241febd1fc.js"></script>
                 
