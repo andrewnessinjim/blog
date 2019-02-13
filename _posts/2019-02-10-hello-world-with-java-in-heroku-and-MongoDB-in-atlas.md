@@ -2,12 +2,12 @@
 published: true
 title: Hello World with Java in Heroku and MongoDB in Atlas
 ---
-We'll create a java application with a main method that exposes a web service. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from here. All the tools used are free.
+We'll create a java application with a main method that exposes a web service using [jersey library][12]. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from here. All the tools used are free.
 
 ## Prerequisites
-* [Maven][4]
-* [JDK][5]
-* [Git][8]
+* [Install Maven][4]
+* [Install JDK][5]
+* [Install Git][8]
 
 ## Step 1: Build and Run a Hello World Java Application using Jersey
 By the end of this step, you should have a java application that you can run locally and has a web service which returns a hardcoded `Hello World` string.
@@ -64,24 +64,19 @@ Add the below dependency to your `pom.xml` file:
 3. Copy the standard connection string.
 4. Replace the username and password to tutorial-user. This is the same user created earlier. The URL should look something like this now:
 
-        mongodb://tutorial-user:tutorial-user@cluster0-shard-00-00-2lbue.mongodb.net:27017,cluster0-shard-00-01-2lbue.mongodb.net:27017,cluster0-shard-00-02-2lbue.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin
+<script src="https://gist.github.com/andrewnessinjim/402bd69f25f11e76a354b0cfbd4be437.js"></script>
     
-  
 You can refer to the [docs][7] for a step by step tutorial, but here's the code for connecting:
 
 <script src="https://gist.github.com/andrewnessinjim/3f762c431f38f6852b5383afc33218e7.js"></script>
 
 Place this code in a new `MongoService.java` file in `com.ripecoe.heroku` package. Change your `getIt()` method in `MyResource` class:
 
-    @GET
-        @Produces(MediaType.TEXT_PLAIN)
-        public String getIt() {
-            return MongoService.getMessage();
-        }
+<script src="https://gist.github.com/andrewnessinjim/1595b5ad5ca880dc018982f37ab9fb96.js"></script>
     
  Add the necessary import:
  
- 	import com.ripecode.heroku.MongoService;
+`import com.ripecode.heroku.MongoService;`
     
  You can now run the same commands you used before and see the application in action:
  
@@ -96,14 +91,13 @@ Now let's get back to the files  we saw earlier:
     
 The `ProcFile` tells Heroku how to run your application. This file will have the same java command that we have been using to run the application so far. The `pom.xml` file is configured to dump all your application dependencies into a directory called `dependency` under `target`. Heroku makes the `target` directory available when the commands in `ProcFile` are executed. Hence, we're able to mention subdirectories of `target` folder as java classpaths. You need not change any of this. However, ensure that the JDK version configured in your `system.properties` file is `1.8`:
 
-	java.runtime.version=1.8
+`java.runtime.version=1.8`
 
 This is essential to connect to MongoDB free tier instance. Heroku deployments are carried out using git repositories. So we've to create a git repository:
 
 1. Create a `.gitignore` file with the below contents (`.idea` is for IntelliJ. Ignore the relevant metadata files of your IDE):
 
-        target
-        .idea
+<script src="https://gist.github.com/andrewnessinjim/1c62f0b421e5d26115508013ff354a86.js"></script>
 
 2. Run `git init`
 3. Run `git add .`
@@ -115,26 +109,24 @@ This is essential to connect to MongoDB free tier instance. Heroku deployments a
 2. Follow the [official docs to install][10] the heroku command line utility.
 3. `cd` in to your project directory:
     	
-        cd mongo-heroku-webapp/
+`cd mongo-heroku-webapp`
     
 4. Run `heroku login` to login to your account.
 5. Run `heroku create mongo-heroku-webapp` to create your heroku application based on your current directory.
 6. The previous step detects that you have initialized a git repository and sets up the necessary git remotes for deployment. You can verify this with the below command:
 
-        $ git remote -v
-        heroku  https://git.heroku.com/mongo-heroku-webapp.git (fetch)
-        heroku  https://git.heroku.com/mongo-heroku-webapp.git (push)
+<script src="https://gist.github.com/andrewnessinjim/2d51b55fb066adbdefbd1832cba66b77.js"></script>
 
 7. Run `git push heroku master` to deploy your application to heroku.
 8. Run `heroku open` to open your application in your web browser. This will reveal your application's URL in the browser. It should look something like this:
 
-		https://mongo-heroku-webapp.herokuapp.com/
+`https://mongo-heroku-webapp.herokuapp.com/`
         
 Heroku doesn't know the actual URL's we're listening to from our application. But we have the base URL of our application. We can see in the `MyResource` class that we're listening for `/myresource` URL:
 
-		@Path("myresource")
+`@Path("myresource")`
         
-Hence https://mongo-heroku-webapp.herokuapp.com/myresource is the full URL to our application. Accessing this URL from the browser should fetch you the message that we have saved in our atlas cluster. :)
+Hence `https://mongo-heroku-webapp.herokuapp.com/myresource` is the full URL to our application. Accessing this URL from the browser should fetch you the message that we have saved in our atlas cluster. :)
 
 ![Final output in a browser]({{ site.baseurl }}/images/hello-mongo-heroku/output.PNG)
 
@@ -155,3 +147,4 @@ You might have noticed that we've hardcoded the DB URL, user name and password i
 [9]: https://signup.heroku.com/dc
 [10]: https://devcenter.heroku.com/articles/getting-started-with-java#set-up
 [11]: https://devcenter.heroku.com/articles/getting-started-with-java#define-config-vars
+[12]: https://jersey.github.io/
