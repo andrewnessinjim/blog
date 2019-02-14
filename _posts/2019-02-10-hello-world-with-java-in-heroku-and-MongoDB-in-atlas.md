@@ -2,7 +2,7 @@
 published: true
 title: Hello World with Java in Heroku and MongoDB in Atlas
 ---
-We'll create a java application with a main method that exposes a web service using [jersey library][12]. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from here. All the tools used are free.
+We'll create a java application with a main method that exposes a web service using [jersey library][12]. This service responds with a message fetched from an M0 instance running in [MongoDB Atlas][1]. You can download the code from [here][13]. All the tools used are free.
 
 ## Prerequisites
 * [Install Maven][4]
@@ -148,3 +148,4 @@ You might have noticed that we've hardcoded the DB URL, user name and password i
 [10]: https://devcenter.heroku.com/articles/getting-started-with-java#set-up
 [11]: https://devcenter.heroku.com/articles/getting-started-with-java#define-config-vars
 [12]: https://jersey.github.io/
+[13]: https://github.com/andrewnessinjim/mongo-heroku-webapp
