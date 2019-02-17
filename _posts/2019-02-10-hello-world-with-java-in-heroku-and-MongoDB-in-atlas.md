@@ -135,6 +135,7 @@ You might have noticed that we've hardcoded the DB URL, user name and password i
 ## References
 * [Heroku's official "Getting Started on Heroku with Java" tutorial][2]
 * [Jersey's official "Creating a Web Application that can be deployed on Heroku" tutorial][3]
+* [MongoDB's official "MongoDB Driver Quick Start" for Java][14]
 
 [1]: https://www.mongodb.com/cloud/atlas
 [2]: https://devcenter.heroku.com/articles/getting-started-with-java
@@ -149,3 +150,4 @@ You might have noticed that we've hardcoded the DB URL, user name and password i
 [11]: https://devcenter.heroku.com/articles/getting-started-with-java#define-config-vars
 [12]: https://jersey.github.io/
 [13]: https://github.com/andrewnessinjim/mongo-heroku-webapp
+[14]: http://mongodb.github.io/mongo-java-driver/3.4/driver/getting-started/quick-start/
